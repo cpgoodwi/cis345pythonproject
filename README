@@ -1,0 +1,12 @@
+This project is far from complete.
+
+My goal is to use React to use React to implement a GUI, but progress has been slower than anticipated.
+It is 5 AM at the time of writing this and I need to go to sleep.
+
+You should just be able to run Server.py use the application. It uses Flask so, it wants you to go to localhost:5000
+
+The JS code written by me is in the src directory. The JS in the static directory is compiled by a node.js module and is Flask sees.
+My Python class files are in the game_modules directory.
+
+Email me cpgoodwi@asu.edu or message me on slack if you want to ask me anything about this because the code has been pretty difficult
+to write for the last couple hours. I can't imagine how hard it is to read.

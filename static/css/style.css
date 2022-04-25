@@ -1,0 +1,70 @@
+body {
+    background: darkslateblue;
+    font-family: Cooper;
+    font-size: 2rem;
+    text-align: center;
+    /* color: orange;
+    text-shadow: .1rem .1rem gray, -.1rem .1rem gray, -.1rem -.1rem gray, .1rem -.1rem gray; */
+}
+
+#container {
+    width: 55ch;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+#login, #turn {
+    display: flex;
+    flex-flow: column;
+}
+
+#login *, #turn * {
+    background: orange;
+    border: .5rem white solid;
+    border-radius: .75rem;
+    margin: 1rem;
+    font-size: 3rem;
+}
+
+#login input {
+    font-family: Cooper;
+    font-size: 2.5rem;
+    padding-left: 1ch
+}
+
+#login #bottom {
+    background: none;
+    border: none;
+    display: flex;
+    flex-flow: row;
+    justify-content: space-between;
+}
+
+#login #bottom * {
+    width: 30%;
+    margin: 0;
+    font-family: inherit;
+    font-size: 1.5rem;
+}
+
+#turn #info {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    background: none;
+    border: none;
+}
+
+#turn #info div {
+    display: inline-block;
+    font-size: 1.5rem;
+}
+
+#turn #team #pet{
+    padding: none;
+    margin: none;
+    display: inline;
+    width: 10ch;
+}

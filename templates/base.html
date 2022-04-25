@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>CIS 345 Project</title>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="{{url_for('static', filename='css/style.css')}}" charset="UTF-8">
+    
+    <!-- Note: when deploying, replace "development.js" with "production.min.js". -->
+    <script crossorigin src="https://unpkg.com/react@17/umd/react.development.js"></script>
+    <script crossorigin src="https://unpkg.com/react-dom@17/umd/react-dom.development.js"></script>
+
+    <script src="{{url_for('static', filename='js/States.js')}}"></script>
+    <script src="{{url_for('static', filename='js/Game.js')}}"></script>
+</head>
+<body><div id="container">
+
+    <div id="root">App goes here</div>
+
+    <!-- runs the index script that renders the App component -->
+    <script src="{{url_for('static', filename='js/App.js')}}" text="text/babel"></script>
+</div></body>
+</html>
