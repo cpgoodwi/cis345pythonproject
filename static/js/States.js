@@ -39,10 +39,11 @@ function Login(props) {
 // Turn Screen
 
 function Turn(props) {
+    // TODO: allow empty spots in the team
     var team_disp = props.teamData.map(function (pet, i) {
         return React.createElement(PetIcon, { petData: pet, key: i });
     });
-    var shop_disp = props.teamData.map(function (item, i) {
+    var shop_disp = props.shopData.map(function (item, i) {
         return React.createElement(PetIcon, { petData: item, key: i });
     });
 

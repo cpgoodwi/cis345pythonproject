@@ -7,6 +7,17 @@ body {
     text-shadow: .1rem .1rem gray, -.1rem .1rem gray, -.1rem -.1rem gray, .1rem -.1rem gray; */
 }
 
+img {
+    -webkit-user-drag: none;
+    -khtml-user-drag: none;
+    -moz-user-drag: none;
+    -o-user-drag: none;
+    filter: drop-shadow(.1rem .1rem 0 white)
+            drop-shadow(-.1rem -.1rem 0 white)
+            drop-shadow(-.1rem .1rem white)
+            drop-shadow(.1rem -.1rem white);
+}
+
 #container {
     width: 55ch;
     margin: auto;
@@ -20,7 +31,7 @@ body {
     flex-flow: column;
 }
 
-#login *, #turn * {
+#login * {
     background: orange;
     border: .5rem white solid;
     border-radius: .75rem;
@@ -53,18 +64,28 @@ body {
     display: flex;
     flex-direction: row;
     justify-content: flex-start;
-    background: none;
-    border: none;
 }
 
 #turn #info div {
     display: inline-block;
     font-size: 1.5rem;
+    background: orange;
+    border: .5rem white solid;
+    border-radius: .75rem;
 }
 
-#turn #team #pet{
+#turn #team * {
+    background: none;
+    border: none;
+}
+
+#turn #team .pet{
     padding: none;
     margin: none;
-    display: inline;
+    display: inline-block;
     width: 10ch;
+}
+
+#team img {
+    transform: scaleX(-1);
 }

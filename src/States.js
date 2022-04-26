@@ -25,8 +25,9 @@ function Login(props) {
 // Turn Screen
 
 function Turn(props) {
+    // TODO: allow empty spots in the team
     const team_disp = props.teamData.map((pet, i) => <PetIcon petData={pet} key={i}/>)
-    const shop_disp = props.teamData.map((item, i) => <PetIcon petData={item} key={i}/>)
+    const shop_disp = props.shopData.map((item, i) => <PetIcon petData={item} key={i}/>)
 
     return (
         <div id="turn">
