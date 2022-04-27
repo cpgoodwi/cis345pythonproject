@@ -29,6 +29,8 @@ function Turn(props) {
     const team_disp = props.teamData.map((pet, i) => <PetIcon petData={pet} key={i}/>)
     const shop_disp = props.shopData.map((item, i) => <PetIcon petData={item} key={i}/>)
 
+    console.log("team data:", props.teamData)
+
     return (
         <div id="turn">
             <div id="info">
@@ -42,7 +44,7 @@ function Turn(props) {
             </div>
             <div id="shop">{shop_disp}</div>
             <div id="buttons">
-                <button>Roll</button>
+                <button>Roll🎲</button>
                 <button>End Turn</button>
             </div>
         </div>

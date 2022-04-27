@@ -14,6 +14,6 @@ class Food:
 
 
 class Apple(Food):
-    """Class definition for Apple"""
+    """Class definition for Apple - Gives Targeted Pet +1 hp and +1 ap"""
     tier = 1
     pack = (True, True)

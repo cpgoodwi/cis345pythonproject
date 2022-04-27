@@ -58,6 +58,6 @@ class Player:
     def to_dict(self):
         return {"name": self.name,
                 "turn": self.turn,
-                "team": [pet.to_dict for pet in list(filter(None, self.team))],
+                "team": [pet.to_dict if pet is not None else None for pet in self.team],
                 "shop": [pet.to_dict for pet in self.shop_pets] +
                         [food.to_dict() for food in self.shop_food]}

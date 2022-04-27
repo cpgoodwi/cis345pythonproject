@@ -26,7 +26,6 @@ var App = function (_React$Component) {
         };
         _this.statusHandler = _this.statusHandler.bind(_this);
         _this.playerHandler = _this.playerHandler.bind(_this);
-        _this.teamHandler = _this.teamHandler.bind(_this);
         return _this;
     }
 
@@ -48,23 +47,9 @@ var App = function (_React$Component) {
                 _this2.setState({ name: serverPlayer.name });
                 _this2.setState({ coin: serverPlayer.coin });
                 _this2.setState({ team: serverPlayer.team });
+                console.log("serverPlayerTeam", serverPlayer.team);
                 _this2.setState({ shop: serverPlayer.shop });
             });
-        }
-    }, {
-        key: "teamHandler",
-        value: function teamHandler(e) {
-            // TODO: implement upcalls to server to modify team from client
-            var clientTeam = {};
-            fetch("/team").then(function (res) {
-                return res.json();
-            }).then(
-            // serverTeam => clientTeam.append(serverTeam)
-            function (serverTeam) {
-                return Object.assign(clientTeam, serverTeam);
-            });
-
-            this.setState({ team: clientTeam });
         }
     }, {
         key: "render",

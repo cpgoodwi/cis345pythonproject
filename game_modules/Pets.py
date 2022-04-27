@@ -6,7 +6,6 @@ class Sloth:
     tier = 1
     pack = (True, True)
 
-
     def __init__(self, ap=1, hp=1, xp=1, eq=None):
         self.name = type(self).__name__
         self.ap = ap
@@ -20,6 +19,7 @@ class Sloth:
     @property
     def to_dict(self):
         return {"name": self.name,
+                "tier": self.__class__.tier,
                 "img_url": f"https://superauto.pet/assets/pet-{self.name.casefold()}.svg",
                 "ap": self.ap,
                 "hp": self.hp,
@@ -37,6 +37,7 @@ class Ant(Sloth):
 
     def __str__(self):
         return "Ant"
+
 
 class Beaver(Sloth):
     tier = 1

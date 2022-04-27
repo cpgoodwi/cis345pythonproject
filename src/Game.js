@@ -1,14 +1,14 @@
 // PetIcon Component
 function PetIcon(props) {
-    console.log(props.petData.name)
-    return (
-        <div className="pet">
-            <h3>{props.petData.name}</h3>
-            <img src={props.petData.img_url}/>
-            <div className="petStats">
-                <div className="petAP">{props.petData.ap} ap</div>
-                <div className="petHP">{props.petData.hp} hp</div>
+    if (props.petData === null)
+        return <div className="pet"></div>
+    else {
+        return (
+            <div className="pet">
+                <h6>{props.petData.tier}</h6>
+                <img src={props.petData.img_url}/>
+                <div className="petStats">{props.petData.ap}⚔️ {props.petData.hp}💖</div>
             </div>
-        </div>
-    )
+        )
+    }
 }

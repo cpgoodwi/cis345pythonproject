@@ -1,3 +1,7 @@
+* {
+    border: 1px red solid
+}
+
 body {
     background: darkslateblue;
     font-family: Cooper;
@@ -74,18 +78,22 @@ img {
     border-radius: .75rem;
 }
 
+#turn #team, #turn #shop {
+    float: left;
+}
+
 #turn #team * {
     background: none;
     border: none;
 }
 
-#turn #team .pet{
+.pet{
     padding: none;
     margin: none;
     display: inline-block;
-    width: 10ch;
+    width: 9ch;
 }
 
-#team img {
+#team img, #shop img {
     transform: scaleX(-1);
 }

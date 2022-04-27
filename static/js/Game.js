@@ -1,30 +1,23 @@
 // PetIcon Component
 function PetIcon(props) {
-    console.log(props.petData.name);
-    return React.createElement(
-        "div",
-        { className: "pet" },
-        React.createElement(
-            "h3",
-            null,
-            props.petData.name
-        ),
-        React.createElement("img", { src: props.petData.img_url }),
-        React.createElement(
+    if (props.petData === null) return React.createElement("div", { className: "pet" });else {
+        return React.createElement(
             "div",
-            { className: "petStats" },
+            { className: "pet" },
             React.createElement(
-                "div",
-                { className: "petAP" },
-                props.petData.ap,
-                " ap"
+                "h6",
+                null,
+                props.petData.tier
             ),
+            React.createElement("img", { src: props.petData.img_url }),
             React.createElement(
                 "div",
-                { className: "petHP" },
+                { className: "petStats" },
+                props.petData.ap,
+                "\u2694\uFE0F ",
                 props.petData.hp,
-                " hp"
+                "\uD83D\uDC96"
             )
-        )
-    );
+        );
+    }
 }

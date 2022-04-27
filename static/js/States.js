@@ -47,6 +47,8 @@ function Turn(props) {
         return React.createElement(PetIcon, { petData: item, key: i });
     });
 
+    console.log("team data:", props.teamData);
+
     return React.createElement(
         'div',
         { id: 'turn' },
@@ -94,7 +96,7 @@ function Turn(props) {
             React.createElement(
                 'button',
                 null,
-                'Roll'
+                'Roll\uD83C\uDFB2'
             ),
             React.createElement(
                 'button',

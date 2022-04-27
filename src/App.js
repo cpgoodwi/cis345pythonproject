@@ -13,7 +13,6 @@ class App extends React.Component {
         }
         this.statusHandler = this.statusHandler.bind(this)
         this.playerHandler = this.playerHandler.bind(this)
-        this.teamHandler = this.teamHandler.bind(this)
     }
 
     statusHandler(newStatus) {
@@ -28,20 +27,10 @@ class App extends React.Component {
                 this.setState({name: serverPlayer.name})
                 this.setState({coin: serverPlayer.coin})
                 this.setState({team: serverPlayer.team})
+                console.log("serverPlayerTeam", serverPlayer.team)
                 this.setState({shop: serverPlayer.shop})
             }
         )
-    }
-
-    teamHandler(e) {
-        // TODO: implement upcalls to server to modify team from client
-        var clientTeam = {}
-        fetch("/team").then(res => res.json()).then(
-            // serverTeam => clientTeam.append(serverTeam)
-            serverTeam => Object.assign(clientTeam, serverTeam)
-        )
-
-        this.setState({team: clientTeam})
     }
 
     render() {

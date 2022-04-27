@@ -2,7 +2,7 @@ from flask import Flask, render_template
 from game_modules.Players import *
 
 app = Flask(__name__)
-p = Player(team=[Ant(), Ant(), Beaver(), Ant(), Beaver()])  # dummy player for gui testing
+p = Player(team=[Ant(), Ant(), None, Ant(), Beaver()])  # dummy player for gui testing
 
 
 def main():
